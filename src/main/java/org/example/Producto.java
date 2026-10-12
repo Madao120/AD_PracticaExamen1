@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class Producto implements Serializable {
     String nombre;
     double precio;
-    transient int cantidad = 0;
+    transient int cantidad = 1;
 
     public Producto (String nombre, double precio, int cantidad){
         this.nombre = nombre;
@@ -20,6 +20,6 @@ public class Producto implements Serializable {
 
     @Override
     public String toString(){
-        return "Producto " + nombre + "\nPrecio: "+ precio + "\n Cantidad: " + cantidad;
+        return "Producto " + nombre + "\nPrecio: "+ precio + "\nCantidad: " + cantidad;
     }
 }
